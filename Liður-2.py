@@ -34,20 +34,14 @@ def finna_netfong (text):
     
     """
   # Reglusegð til að finna netföng
-    pattern = r'[a-zA-Z0-9._%+-]+@[a-zA-Z0-9-]+\.[a-zA-Z]{2,6}(?:\.[a-zA-Z]{2,6})?'
+    pattern = r"^[a-zA-Z0-9._+-]+@[a-zA-Z0-9-]+\.[a-zA-Z]{2,6}(?:\.[a-zA-Z]{2,6})?$"
+
     
     # Samstilla segðina
     compiled_pattern = re.compile(pattern)
-    matches = compiled_pattern.finditer(text)
+    matches = list(filter(compiled_pattern.match, text))
     
     return matches
-    
-    # Búa til lista fyrir niðurstöður
-    results = []
-
-    raise NotImplementedError("Regluleg segð til að finna netföng hefur ekki verið útfærð.")
-
-
 
 def prenta_nidurstodur(netfong_listi):
     """
