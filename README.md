@@ -46,8 +46,11 @@ Kennitölur fyrirtækja:
 Hér er heildarkeyrslan úr Command glugganum:
 
 C:\Users\bened\OneDrive - Menntaský\Documents\GitHub\regex-lannister>python Lidur1seinniHluti.py
+
 Sláðu inn nafn á textaskrá (t.d. 'input.txt'): testTexti.txt
+
 Viltu einstaklings (1), fyrirtækja (2) eða bæði (3)? (1/2/3): 3
+
 Kennitölur einstaklinga:
 010199-3459
 230585-1230
