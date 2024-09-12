@@ -22,39 +22,32 @@ Fundin var reglulega segð sem gat lesið hvern hóp fyrir sig; Eiginnafn og mil
 ##### Nánari útskýring: 
 (?m): Þýðir að ^ og $ virka fyrir upphaf og endi hverrar línu. 
 
-^ og $: alltaf í upphafi og enda hverrar segðar. 
+^ og $: Er alltaf í upphafi og enda hverrar segðar. 
 
 (.*?): Er hópur sem tekur hvaða texta sem er í upphafi þar til það kemur bil. T.d. myndi einungis lesa Jón í Jón Jónsson. 
 
 \s+: Bil milli nafna 
 
-(\S+): Fangar annað orð. T.d. Jón Jónsson
+(\S+): Það passar við allt sem er ekki bil. Fangar næsta nafn eins og Jónsson eftir Jón þannig þá væri búið að lesa Jón Jónsson
 
-Því næst kemur komma sem aðgreinir nafn frá næsta hópi sem er heimilisfang og \s* við möguleg bil eftir kommu 
+,\s*: Því næst kemur komma sem aðgreinir nafn frá næsta hópi sem er heimilisfang og \s* við möguleg bil eftir kommu. 
 
-([^,\n]+): Tekur heimilisfangið (eða allt sem er ekki komma eða línuskipti)
+([^,\n]+): Les heimilisfangið (eða allt sem er ekki komma eða línuskipti)
 
-,\s*: Aðgreinir næsta hóp og leyfir bil
-
-([^,\n]+): Fangar póstnúmer og stað 
+([^,\n]+): Fangar póstnúmer
 
 Að lokum ([^,\n]+): Sem fangar símanúmer
 
 Sem dæmi: Guðrún Helgadóttir, Fiskislóð 15, 101 Reykjavík, 510-7000
-(.*?): Fanga "Guðrún".
-(\S+): Fanga "Helgadóttir".
-([^,\n]+): Fanga "Fiskislóð 15".
-([^,\n]+): Fanga "101 Reykjavík".
-([^,\n]+): Fanga "510-7000"
+(.*?): Les "Guðrún".
+(\S+): Les "Helgadóttir".
+([^,\n]+): Les "Fiskislóð 15".
+([^,\n]+): Les "101 Reykjavík".
+([^,\n]+): Les "510-7000"
 
-Notkun á .*? og \S+ er mun þægilegri og almennari leið til að fanga stafi í staðinn fyrir að þurfa að takmarka við aðeins bókstafi eða tölustafi með tjáningum eins og [A-Za-z] eða [0-9].
-Þar sem:
-.: Táknar hvaða staf sem er nema línuskipti. 
-Í tjáningunni .*?, passar það við hvaða staf sem er, þar á meðal bókstafi, tölustafi og sértákn.
+Notkun á .*? og \S+ er mun þægilegri og almennari leið til að lesa stafi í staðinn fyrir að þurfa að takmarka við aðeins bókstafi eða tölustafi með tjáningum eins og [A-Za-z] eða [0-9].
 
-\S+: Táknar hvaða runu af stöfum sem er sem eru ekki bil. Það passar við allt sem er ekki bil, þar með talið bókstafi, tölustafi og tákn.
-
-Þá var hægt að endurraða hópunum með því að fara línu eftir línu og gera nýjan streng sem endurraðaði hópunum í heimilisfang, póstnúmer, símanúmer, kenninafn og að lokum eiginnafn og millinafn með neðantaldri for-lykku:
+Þá var búið að flokka upplýsingarnar í 5 hópa sem hægt var að endurraða með því að fara línu eftir línu og gera nýjan streng sem endurraðaði hópunum í heimilisfang, póstnúmer, símanúmer, kenninafn og að lokum eiginnafn og millinafn (í röð) með neðantaldri for-lykku:
 
 out_list = []
     for lina in linur:
