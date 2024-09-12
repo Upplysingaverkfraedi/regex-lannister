@@ -6,7 +6,7 @@ Python forritið tekur hrágögn af vefsíðunni timataka.net og umbreytir þeim
 ## Keyrsla 
 1. Til þess að keyra kóðann þarf að setja eftirfarandi slóð í console.
 
-python3 Lidur4.py --url "https://timataka.net/hundahlaupid2024/urslit/?race=1&cat=overall" --output data/hlaup.csv --debug
+`python3 Lidur4.py --url "https://timataka.net/hundahlaupid2024/urslit/?race=1&cat=overall" --output data/hlaup.csv --debug`
 
 2. Í kjölfarið sendir forritið "request" til URL til þess að sækja HTML skránna af vefsíðunni. 
 
@@ -18,10 +18,10 @@ python3 Lidur4.py --url "https://timataka.net/hundahlaupid2024/urslit/?race=1&ca
 
 Hér má sjá hvernig keyrslan kemur út: 
 
-elisabet@Elisabets-Air regex-lannister % python3 Lidur4.py --url "https://timataka.net/hundahlaupid2024/urslit/?race=1&cat=overall" --output data/hlaup.csv --debug
+`elisabet@Elisabets-Air regex-lannister % python3 Lidur4.py --url "https://timataka.net/hundahlaupid2024/urslit/?race=1&cat=overall" --output data/hlaup.csv --debug
 HTML fyrir https://timataka.net/hundahlaupid2024/urslit/?race=1&cat=overall vistað í data/hlaup.html
 Niðurstöður vistaðar í 'data/hlaup.csv'.
-elisabet@Elisabets-Air regex-lannister % 
+elisabet@Elisabets-Air regex-lannister % `
 
 ## Notkun: 
 1. Sjáðu til þess að búið sé að hlaða Python í tölvuna og öllum nauðsynlegu pökkum. Í þessu tilfelli eru það: 
