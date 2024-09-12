@@ -1,4 +1,4 @@
-# Reglulegar segðir (Regular Expressions)
+# 4. Gagnaúrvinnsla
 
 ## Forritið  
 Python forritið tekur hrágögn af vefsíðunni timataka.net og umbreytir þeim yfir í auðlesanlega csv skrá. 
