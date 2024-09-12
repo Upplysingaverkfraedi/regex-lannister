@@ -11,7 +11,10 @@ Fyrst þarf að vera klárt að Python sé uppsett á tölvunni. Þú getur athu
 ## Uppsetning
 
 ### 1. Hala niður forritinu
-Fyrst hala niður öllum viðeigandi skrám af Github, Lidur1seinniHluti.py og testTexti.txt ef þú vilt pre-made prófunartexta, annars má nota hvaða .txt file sem er. Hér þarf að passa að allar skrár séu inn í sömu möppu svo að það verði ekki vandamál með keyrslu með skipanalínunni.
+Nauðsynlegt er að hlaða niður repoinu áður en haldið er lengra. það er gert með
+```
+git@github.com:Upplysingaverkfraedi/regex-lannister.git
+```
 
 ### 2. Settu upp Python (ef það er ekki uppsett)
 - **Windows**:
