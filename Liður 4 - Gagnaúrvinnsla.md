@@ -14,7 +14,7 @@ Python forritið tekur hrágögn af vefsíðunni timataka.net og umbreytir þeim
 ## Vinnsla 
 Farið var yfir mótin á vefsíðunni og áhugavert var að sjá Hundahlaupið 2024 og því varð það fyrir valinu að þessu sinni. 
 
-Næst var tekin beinagrindin af kóðanum code/timataka.py og unnið var í def parse_html(html): til þess að útfæra reglulega segð sem tekur til gagna úr HTML skránni. Reglulegu segðirnar eru eftirfarandi: 
+Næst var tekin beinagrindin af kóðanum code/timataka.py og unnið var í def parse_html(html) til þess að útfæra reglulega segð sem tekur til gagna úr HTML skránni. Reglulegu segðirnar eru eftirfarandi: 
 
     - row_pattern = re.compile(r'<tr>(.*?)</tr>', re.DOTALL)
 
@@ -33,7 +33,7 @@ Næst var tekin beinagrindin af kóðanum code/timataka.py og unnið var í def 
 
 
 ## Breytingar á kóðanum: 
-Beinagrind af kóðanum fékkst undir Code á github. Til þess að klára kóðann og fá hann til þess að keyra þurfti að bæta aðeins við beinagrindina. Því sem var breytt var undir "parse_html" og svo voru if-skilyrðin í main fallinu aðeins lagfærð. 
+Beinagrind af kóðanum fékkst undir Code á Github. Til þess að klára kóðann og fá hann til þess að keyra þurfti að bæta aðeins við beinagrindina. Því sem var breytt var undir "parse_html" og svo voru if-skilyrðin í main fallinu aðeins lagfærð. 
 
 ### parse_html: 
 Hér voru búnar til reglulegar segðir til að taka in gögn úr HTML skránni. Einnig var búinn til kóðabútur sem les inn hverja línu af skránni og hreinsar til hvern dálk og skilar svo lista yfir gildin í hverjum dálki í hverri línu af HTML skránni. 
