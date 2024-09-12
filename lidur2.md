@@ -14,18 +14,17 @@ r^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9-]+\.[a-zA-Z]{2,6}(?:\.[a-zA-Z]{2,6})?$.
 
 [a-zA-Z0-9._%+-]+@
 
-Les bæði há- og lágstafi, tölustafi, punkt, undirstrik, %, og mínus. Seinasti plúsinn fyrir utan hornklofann segir að það sem er inní hornklofanum þarf að koma allavega einu sinni fram, má koma oftar. Að lokum kemur @ eftir notandanafninu. 
+Fyrsti hornklofinn táknar notandanafn emails sem má bæði hafa há- og lágstafi, tölustafi, punkt, undirstrik, %, og mínus. Plúsinn fyrir utan hornklofann segir að það sem er inní hornklofanum má koma einu sinni eða oftar fram. Að lokum kemur @ eftir notandanafninu. Líkt og helgaingim@ og hei2@
 
 [a-zA-Z0-9-]+\.
-Þetta skilgreinir lénsheitið á undan punktinum (t.d. hi eða new-world). Leyfilegt er að hafa há- og lágstafi, tölustafi og bandstrik. Aftur þýðir + merkið að innan hornklofans geti komið einu sinni eða oftar fram. Að lokum þarf backslash að vera á undan punkti svo punkturinn þýði ekki hvaða staf sem er heldur bókstaflega punkt.
-
+Næsti hornklofi skilgreinir lénið þ.e.a.s. hi eða new-world sem dæmi má nefna. Leyfilegt er að hafa há- og lágstafi, tölustafi og bandstrik. Plúsmerkið fyrir aftan hornklofann þýðir það sama og áður, allt innan hornklofans kemur fram einu sinni eða oftar. Að lokum er backslash og punktur sem merkir bókstaflega punkt en ekki hvaða staf sem er þar sem \ kemur á undan punkti. 
 
 [a-zA-Z]{2,6}
-Þetta tryggir að lénsheitið (t.d. .is, .us) sé á milli 2 og 6 stafa langt. Ólöglegt ef það er lengra. 
+Les rótarlénið (t.d. .is, .us) sem má vera bókstafir (í há- og lágstöfum) og 2 og 6 stafa langt. 
 
 (?:\.[a-zA-Z]{2,6})? 
-Leyfir valfrjálsan annan punkt með lénsheita-viðbót að lengd 2 til 6 stafa. Það gerir ráð fyrir netföngum með tveimur lénsheitum líkt og „edu.com“.
-Spurningarmerkið á eftir hópnum þýðir að það þurfi ekki að koma fram. 
+Gerir ráð fyrir netföngum með undirléni þ.e.a.s. tveimur lénsheitum líkt og „edu.com“ að lengd 2 til 6 stafa. 
+Spurningarmerkið á eftir hópnum þýðir að það er valfrjálst, þ.e. þarf ekki að hafa undirlén. 
 
 
 
