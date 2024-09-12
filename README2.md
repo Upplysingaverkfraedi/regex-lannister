@@ -1,6 +1,6 @@
-# Kennitölu leitarforrit
+# Lögleg email
 
-Þetta Python forrit leitar að kennitölum einstaklinga og fyrirtækja úr textaskrá með reglulegum segðum. Forritið gefur notanda val um hvort hann vilji fá einstaklings, fyrirtækja eða bæði
+Þetta Python forrit les inn inn texta skrá með netföngum og prentar út hvaða email eru lögleg.
 
 ## Kröfur
 
